@@ -113,6 +113,16 @@ export const ADC_PIN_MAP: Partial<Record<BoardKind, Array<{ pinName: string; cha
 function avrPinFromName(_name: string, channel: number): number {
   return 14 + channel;
 }
+/** The ATmega2560 breaks A0-A15 out on pins 54-69, not the 328P's 14-21.
+ *  Reusing avrPinFromName here made every Mega analog pad resolve to the
+ *  wrong pin: `isPartOwnedPin` then failed to see the part that owned the
+ *  channel, and `setAdcVoltage` reinterpreted pin 14 as a 328P A0 and
+ *  overwrote ADC channel 0 with the solved net voltage on every store
+ *  update — so a part writing its own analog value (LDR, potentiometer)
+ *  was stomped and read back a constant. */
+function megaPinFromName(_name: string, channel: number): number {
+  return 54 + channel;
+}
 function gpioPinFromName(name: string, _channel: number): number {
   const m = name.match(/(\d+)$/);
   return m ? parseInt(m[1], 10) : -1;
@@ -121,7 +131,7 @@ function gpioPinFromName(name: string, _channel: number): number {
 const ADC_PIN_TO_GPIO: Partial<Record<BoardKind, (pinName: string, channel: number) => number>> = {
   'arduino-uno': avrPinFromName,
   'arduino-nano': avrPinFromName,
-  'arduino-mega': avrPinFromName,
+  'arduino-mega': megaPinFromName,
   attiny85: avrPinFromName,
 
   'raspberry-pi-pico': gpioPinFromName,
@@ -156,7 +166,9 @@ function adcPinsFor(kind: BoardKind): Array<{ pinName: string; channel: number }
  * xiao 'D1' -> GPIO2, bare '34' -> 34, ...); AVR/ATtiny/Pico keep their
  * legacy per-kind converters (their sims expect Arduino pin numbers, not
  * GPIOs — e.g. uno 'A0' -> 14). */
-function gpioForBoardPin(kind: BoardKind, pinName: string, channel: number): number {
+/** Exported for tests: the Mega/328P split is invisible until a part's own
+ *  analog write gets stomped by an injection aimed at the wrong pin. */
+export function gpioForBoardPin(kind: BoardKind, pinName: string, channel: number): number {
   if (kind === 'esp32' || kind.startsWith('esp32') || kind.startsWith('xiao-esp32')
       || kind === 'arduino-nano-esp32' || kind === 'wemos-lolin32-lite'
       || kind === 'aitewinrobot-esp32c3-supermini') {

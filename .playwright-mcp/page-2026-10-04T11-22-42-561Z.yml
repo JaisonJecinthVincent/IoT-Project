@@ -1,0 +1,231 @@
+- generic [ref=f1e1]:
+  - generic [ref=f1e3]:
+    - banner [ref=f1e4]:
+      - generic [ref=f1e5]:
+        - generic [ref=f1e6]:
+          - link "Velxio" [ref=f1e12] [cursor=pointer]:
+            - /url: /
+          - generic [ref=f1e13]:
+            - button "File" [ref=f1e15] [cursor=pointer]
+            - button "Edit" [ref=f1e17] [cursor=pointer]
+            - button "View" [ref=f1e19] [cursor=pointer]
+            - button "Account" [ref=f1e21] [cursor=pointer]
+            - button "Help" [ref=f1e23] [cursor=pointer]
+        - generic [ref=f1e25]:
+          - generic [ref=f1e28]:
+            - generic [ref=f1e29]:
+              - button "Compile (Ctrl+B)" [ref=f1e30] [cursor=pointer]
+              - button "Run (auto-compiles if needed)" [disabled] [ref=f1e34]
+              - button "Stop" [ref=f1e37] [cursor=pointer]
+              - button "Reset" [ref=f1e40] [cursor=pointer]
+            - generic [ref=f1e44]:
+              - button "Search and install Arduino libraries" [ref=f1e45] [cursor=pointer]
+              - button "Toggle Output Console" [ref=f1e49] [cursor=pointer]
+              - button "Switch to light theme" [ref=f1e52] [cursor=pointer]
+          - generic [ref=f1e57]:
+            - generic [ref=f1e58]:
+              - generic "Running" [ref=f1e822]
+              - combobox "Active board" [disabled] [ref=f1e60]:
+                - option "Arduino Mega 2560" [selected]
+              - button "Serial" [active] [ref=f1e61] [cursor=pointer]
+              - button "Scope" [ref=f1e65] [cursor=pointer]
+            - button "Add" [disabled] [ref=f1e69]
+    - generic [ref=f1e71]:
+      - generic [ref=f1e72]:
+        - generic [ref=f1e75]:
+          - generic [ref=f1e76]:
+            - generic [ref=f1e77]: WORKSPACE
+            - generic [ref=f1e78]:
+              - button "New workspace (choose a starter template)" [ref=f1e79] [cursor=pointer]
+              - button "Open project (.vlx Velxio or .zip Wokwi)" [ref=f1e82] [cursor=pointer]
+              - button "Save project (Ctrl+S) — saved" [ref=f1e86] [cursor=pointer]
+          - generic [ref=f1e92]:
+            - generic "Arduino Mega 2560 — click to edit" [ref=f1e93] [cursor=pointer]:
+              - generic [ref=f1e94]:
+                - generic "Running" [ref=f1e823]
+                - button "Rename board (or double-click the name)" [ref=f1e96]
+                - button "New file in this board" [ref=f1e99]
+                - button "New folder" [ref=f1e103]
+              - generic [ref=f1e106]:
+                - button "Collapse" [ref=f1e107]
+                - generic [ref=f1e110]: ▬
+                - generic "Double-click to rename" [ref=f1e111]: Arduino Mega 2560
+            - generic [ref=f1e112]:
+              - generic "smartbuilding.ino" [ref=f1e113] [cursor=pointer]
+              - generic "config.h" [ref=f1e119] [cursor=pointer]
+              - generic "state.h" [ref=f1e125] [cursor=pointer]
+              - generic "state.cpp" [ref=f1e131] [cursor=pointer]
+              - generic "hal.h" [ref=f1e137] [cursor=pointer]
+              - generic "hal.cpp" [ref=f1e143] [cursor=pointer]
+              - generic "sensors.h" [ref=f1e149] [cursor=pointer]
+              - generic "sensors.cpp" [ref=f1e155] [cursor=pointer]
+              - generic "logic.h" [ref=f1e161] [cursor=pointer]
+              - generic "logic.cpp" [ref=f1e167] [cursor=pointer]
+              - generic "display.h" [ref=f1e173] [cursor=pointer]
+              - generic "display.cpp" [ref=f1e179] [cursor=pointer]
+              - generic "app.h" [ref=f1e185] [cursor=pointer]
+              - generic "app.cpp" [ref=f1e191] [cursor=pointer]
+              - generic "libraries.json — Arduino Mega 2560's declared libraries (read-only; manage from the Library Manager)" [ref=f1e197] [cursor=pointer]:
+                - generic [ref=f1e202]: libraries.json
+                - 'generic "3 declared: DHT sensor library, Servo, LiquidCrystal" [ref=f1e203]': "3"
+        - generic [ref=f1e206]:
+          - code [ref=f1e211]:
+            - generic [ref=f1e212]:
+              - textbox "Editor content" [ref=f1e213]
+              - textbox [aria-hidden] [ref=f1e214]
+              - generic [aria-hidden] [ref=f1e216]:
+                - generic [ref=f1e217]: "1"
+                - generic [ref=f1e226]: "2"
+                - generic [ref=f1e228]: "3"
+                - generic [ref=f1e231]: "4"
+                - generic [ref=f1e233]: "5"
+                - generic [ref=f1e237]: "6"
+                - generic [ref=f1e241]: "7"
+                - generic [ref=f1e244]: "8"
+                - generic [ref=f1e249]: "9"
+                - generic [ref=f1e251]: "10"
+              - generic [aria-hidden] [ref=f1e299]:
+                - generic [ref=f1e300]: //
+                - generic [ref=f1e302]: ─────────────────────────────
+                - generic [ref=f1e304]: ─────────────────────────────
+                - generic [ref=f1e306]: ───────────────────
+                - generic [ref=f1e308]: // Smart Building Gateway
+                - generic [ref=f1e310]: // Arduino Mega 2560 — free,
+                - generic [ref=f1e312]: fully local edge controller.
+                - generic [ref=f1e314]: //
+                - generic [ref=f1e316]: // Everything runs in one
+                - generic [ref=f1e318]: non-blocking tick; no module
+                - generic [ref=f1e320]: uses delay() for
+                - generic [ref=f1e322]: // anything except the
+                - generic [ref=f1e324]: hardware settle times the
+                - generic [ref=f1e326]: datasheets demand. The pin
+                - generic [ref=f1e328]: // map and every tunable are
+                - generic [ref=f1e330]: in config.h.
+                - generic [ref=f1e332]: //
+                - generic [ref=f1e334]: ─────────────────────────────
+                - generic [ref=f1e336]: ─────────────────────────────
+                - generic [ref=f1e338]: ───────────────────
+                - generic [ref=f1e341]: "#include \"app.h\""
+          - generic "Drag to resize" [ref=f1e826]
+          - generic [ref=f1e828]:
+            - generic [ref=f1e829]:
+              - generic [ref=f1e830]: Output
+              - generic [ref=f1e832]:
+                - combobox [ref=f1e833] [cursor=pointer]:
+                  - option "All" [selected]
+                  - option "Errors"
+                  - option "Warnings"
+                - generic [ref=f1e834] [cursor=pointer]:
+                  - checkbox "Auto" [checked] [ref=f1e835]
+                  - text: Auto
+                - button "Clear output" [ref=f1e836] [cursor=pointer]
+                - button "Close" [ref=f1e839] [cursor=pointer]
+            - generic [ref=f1e844]:
+              - generic [ref=f1e845]:
+                - generic [ref=f1e846]: ✓
+                - generic [ref=f1e847]: Arduino Mega 2560
+                - generic [ref=f1e848]: board
+              - generic [ref=f1e849]:
+                - generic [ref=f1e850]:
+                  - generic [ref=f1e851]: 16:49:49
+                  - generic [ref=f1e852]: Starting compilation for Arduino Mega 2560 (arduino:avr:mega)...
+                - generic [ref=f1e853]:
+                  - generic [ref=f1e854]: 16:49:50
+                  - generic [ref=f1e855]: "[served from the build cache - identical sources]"
+                - generic [ref=f1e856]:
+                  - generic [ref=f1e857]: 16:49:50
+                  - generic [ref=f1e858]: Compiling for Arduino Mega 2560...
+                - generic [ref=f1e859]:
+                  - generic [ref=f1e860]: 16:49:50
+                  - generic [ref=f1e861]: ✓ Compilation successful
+      - generic [ref=f1e365]:
+        - generic [ref=f1e366]:
+          - generic:
+            - img [ref=f1e368]:
+              - generic [ref=f1e413]: "false"
+              - generic [ref=f1e415]: PWR
+              - generic [ref=f1e416]: "false"
+              - generic [ref=f1e418]: "false"
+              - generic [ref=f1e420]: "false"
+              - generic [ref=f1e422]: L TX RX
+              - generic [ref=f1e424]: PWM
+              - generic [ref=f1e426]: COMMUNICATION
+              - generic [ref=f1e427]: AREF GND 13 12 11 10 9 8 7 6 5 4 3 2 TX→ 1 RX← 0 TX3 14 RX3 15 TX2 16 RX2 17 TX1 18 RX1 19 SDA 20 SCL 21
+              - generic [ref=f1e430]: POWER ANALOG IN
+              - generic [ref=f1e431]: IOREF RESET 3.3V 5V GND GND Vin A0 A1 A2 A3 A4 A5 A6 A7 A8 A9 A10 A11 A12 A13 A14 A15
+              - generic [ref=f1e432]: Arduino MEGA
+            - generic "Running"
+          - generic:
+            - generic [ref=f1e434] [cursor=pointer]:
+              - img [ref=f1e437]:
+                - generic [ref=f1e444]: DHT22
+              - generic: DHT22
+            - generic [ref=f1e445] [cursor=pointer]:
+              - img [ref=f1e448]:
+                - generic [ref=f1e510]: + D
+              - generic: PIR Motion Sensor
+            - generic [ref=f1e512] [cursor=pointer]:
+              - img [ref=f1e515]:
+                - text: false false
+                - generic [ref=f1e557]: PWR LED VCC GND DO AO DO LED
+              - generic: Photoresistor Sensor
+            - generic [ref=f1e569] [cursor=pointer]:
+              - generic [ref=f1e571]:
+                - button "LIGHT red pushbutton" [ref=f1e572]
+                - generic [ref=f1e590]: LIGHT
+              - generic: Pushbutton
+            - generic [ref=f1e591] [cursor=pointer]:
+              - generic [ref=f1e593]:
+                - button "ARM red pushbutton" [ref=f1e594]
+                - generic [ref=f1e612]: ARM
+              - generic: Pushbutton
+            - generic [ref=f1e613] [cursor=pointer]:
+              - generic [ref=f1e615]:
+                - button "DOOR red pushbutton" [ref=f1e616]
+                - generic [ref=f1e634]: DOOR
+              - generic: Pushbutton
+            - generic [ref=f1e635] [cursor=pointer]:
+              - img [ref=f1e638]:
+                - generic [ref=f1e643]: 1 VSS VDD V0 RS RW E D0 D1 D2 D3 D4 D5 D6 D7 A K 16
+              - generic: LCD1602
+            - generic [ref=f1e647] [cursor=pointer]:
+              - generic [ref=f1e649]:
+                - slider [ref=f1e650]: "55"
+                - slider [ref=f1e651]:
+                  - generic [ref=f1e656]:
+                    - generic [ref=f1e657]: GND
+                    - generic [ref=f1e658]: SIG
+                    - generic [ref=f1e659]: VCC
+              - generic: Potentiometer
+            - generic: Servo
+            - generic: Buzzer
+            - generic [ref=f1e703] [cursor=pointer]:
+              - generic [ref=f1e704]: LIGHT
+              - generic: LED
+            - generic: Resistor (custom)
+            - generic [ref=f1e737] [cursor=pointer]:
+              - generic [ref=f1e738]: FAN
+              - generic: LED
+            - generic: Resistor (custom)
+            - generic [ref=f1e771] [cursor=pointer]:
+              - generic [ref=f1e772]: ALARM
+              - generic: LED
+            - generic: Resistor (custom)
+          - img:
+            - generic:
+              - generic: DC
+              - generic: SPICE 23 nets | 0 ms
+        - generic [ref=f1e805]:
+          - button "Zoom out" [ref=f1e806] [cursor=pointer]
+          - button "100%" [ref=f1e808] [cursor=pointer]
+          - button "Zoom in" [ref=f1e809] [cursor=pointer]
+    - dialog "Star Velxio on GitHub" [ref=f1e811]:
+      - generic [ref=f1e815]:
+        - strong [ref=f1e816]: Enjoying Velxio?
+        - paragraph [ref=f1e817]: A ⭐ on GitHub helps more developers discover the project — it only takes 2 seconds!
+        - link "⭐ Star on GitHub" [ref=f1e818] [cursor=pointer]:
+          - /url: https://github.com/davidmonterocrespo24/velxio
+      - button "Dismiss" [ref=f1e819] [cursor=pointer]: ✕
+  - generic [ref=f1e820]:
+    - alert
+    - alert
